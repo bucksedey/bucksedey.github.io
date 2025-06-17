@@ -128,6 +128,25 @@
         .close:hover {
             color: #3498db;
         }
+        /* Nuevos estilos para la sección de criptografía */
+        .key-display {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.8em;
+            overflow-x: auto;
+            margin: 20px 0;
+            white-space: pre-wrap;
+        }
+        .crypto-instructions {
+            background: #f5f9fc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e1e8ed;
+            margin-top: 20px;
+        }
         @media (max-width: 768px) {
             .container {
                 margin: 10px;
@@ -137,6 +156,9 @@
             }
             .modal-content {
                 width: 95%;
+            }
+            .key-display {
+                font-size: 0.7em;
             }
         }
     </style>
@@ -284,6 +306,37 @@
                     <p>La criptografía post-cuántica busca algoritmos resistentes a ataques de computadoras cuánticas que romperían RSA actual.</p>
                 </div>
             </div>
+
+            <!-- Sección de descarga de llave pública -->
+            <div style="text-align: center; margin-top: 30px;">
+                <h3>Llave Pública RSA 2048</h3>
+                <p>Descarga mi llave pública para enviarme mensajes cifrados</p>
+                
+                <div class="key-display">
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3r3/XHJmGu6ZLlkYq8bi
+/eFAMl6UboEp7I3LfbD7hLLug/+//Ds6QcPToqiaDpgz1fHhBvyT9aG+5u3wZbvR
+kzlrmdfsGMxEnNK+NtPkBEyWmCVs22wFC4i5URhv2iqA94nlw2zXq72W6JosGg6r
+uH8BNpgtcWh1n6NBNKYu2XXqWNCm/Yiqp1YYd33li0mPJNKrTCOD0SjkTzbTJlm3
+wY2lRfELCpgvdK3b8ohWzzmLSMkGpr5IEtKJspVSzCMkqNgwmexRciZVJ7jiWamM
+n/4wqLQw8X7bBetf04TYBU9ncY7Cg2M/TTA5GSlVU8tW9KWHGW78p5CW1EugkGJq
+JQIDAQAB
+-----END PUBLIC KEY-----
+                </div>
+                
+                <a href="data:application/x-pem-file;base64,LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUEzcjMvWEhqZ0d1NlpMbGtZcThiaQovZUZBTWw2VWJvRXA3STNMemJEN2hMTHVnLysvL0RzNlFjUFRvcWlhRHBnejFmSGhCdnlUOWFHKzV1M3daYnZSCmt6bHJtZGZzR01YeEVuTksrTnRQa0JFeVdtQ1ZzMjJ3RkM0aTVVUmh2MmlxQTk0bmx3MnpYcTcyVzZKb3NHZzZyCnVIOEJOcGd0Y1doMW42TkJOS3l1MlhYcVdOQ20vWWlxcDFZWWQzM2xpMG1QSk5LclRDT0QwU2prVHpiVEpsbTMKd1kybFJmRUxDcGd2ZEszYjhvaFd6em1MU01rR3ByNUlFdEtKc3BWU3pDTWtxTmd3bWV4UmNpWlZKN2ppV2FtTQpuLTR3cUxRdzhYN2JCZXRmMDRUWUJVOW5jWTdDZzJNL1RUQTVHU2xWVTh0VzlLV0hHVzc4cDVDVzFFdWdrR0pxCkpRIElEQVFBQQotLS0tLUVORCBQVUJMSUMgS0VZLS0tLS0K" download="marco_flores_public_key.pem" class="button key-btn">Descargar Llave Pública</a>
+                
+                <div class="crypto-instructions">
+                    <h4>Instrucciones para la práctica:</h4>
+                    <ol>
+                        <li>Descarga mi llave pública usando el botón superior</li>
+                        <li>Usa el programa <a href="RSA2048.py" download>RSA2048.py</a> para cifrar mensajes</li>
+                        <li>Envía el mensaje cifrado al destinatario</li>
+                        <li>El destinatario usará su llave privada para descifrarlo</li>
+                    </ol>
+                    <p><strong>Nota:</strong> En la demostración, muestra cómo un atacante (Candy) puede intentar modificar mensajes cifrados.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Contacto y Descargas -->
@@ -297,7 +350,7 @@
             </div>
             <div style="margin: 20px 0;">
                 <a href="CVMAFA.pdf" class="button cv-btn">Descargar CV</a>
-                <a href="#" class="button key-btn">Llave Pública (Próximamente)</a>
+                <a href="RSA2048.py" download class="button key-btn">Descargar Programa RSA</a>
             </div>
         </div>
     </div>
