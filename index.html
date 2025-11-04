@@ -312,14 +312,14 @@
                 <h3>Llave Pública ECDSA</h3>
                 <p>Descarga mi llave pública para enviarme mensajes cifrados</p>
                 
-                <div class="key-display">
+                <div class="key-display" id="publicKeyDisplay">
 -----BEGIN PUBLIC KEY-----
 MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAxVZPZwQCNYmEKRNXjCi7lxj6lBV
 sXcjXidTxGYUnUq1POA0uLCy7yMRjxjlzvRgaePIZfu4/ZZiT6TSZayPUQ==
 -----END PUBLIC KEY-----
                 </div>
                 
-                <a href="data:application/x-pem-file;base64,LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLa09JemswQ0FRWUlLb09JemswRERRY0RRZ0FFQXhWWlBad1FDTlltRUtSTlhqQ2k3bHhqNmxCVgpzWGNqWGlkVHhHWVVuVXExUE9BMHVMQ3k3eU1SanhqbHp2UmdhZVBJWmZ1NC9aWmlUNlRTWmF5UFVRPT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t" download="marco_flores_public_key.pem" class="button key-btn">Descargar Llave Pública</a>
+                <button id="downloadKeyBtn" class="button key-btn">Descargar Llave Pública</button>
                 
                 <div class="crypto-instructions">
                     <h4>Instrucciones para la práctica:</h4>
@@ -378,6 +378,29 @@ sXcjXidTxGYUnUq1POA0uLCy7yMRjxjlzvRgaePIZfu4/ZZiT6TSZayPUQ==
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        });
+
+        // Script para descargar la llave pública
+        document.getElementById('downloadKeyBtn').addEventListener('click', function() {
+            // Obtener el texto de la llave pública
+            const publicKeyText = document.getElementById('publicKeyDisplay').textContent;
+            
+            // Crear un blob con el contenido
+            const blob = new Blob([publicKeyText], { type: 'application/x-pem-file' });
+            
+            // Crear un enlace de descarga
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'marco_flores_public_key.pem';
+            document.body.appendChild(a);
+            a.click();
+            
+            // Limpiar
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
         });
     </script>
 </body>
