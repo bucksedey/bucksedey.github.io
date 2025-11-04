@@ -382,12 +382,20 @@ sXcjXidTxGYUnUq1POA0uLCy7yMRjxjlzvRgaePIZfu4/ZZiT6TSZayPUQ==
 
         // Script para descargar la llave pública
         document.getElementById('downloadKeyBtn').addEventListener('click', function() {
-            // Obtener el texto de la llave pública
-            const publicKeyText = document.getElementById('publicKeyDisplay').textContent;
-            
-            // Crear un blob con el contenido
+            // Obtener el texto de la llave pública (puede venir con espacios por la indentación del HTML)
+            let publicKeyText = document.getElementById('publicKeyDisplay').textContent || '';
+
+            // Limpiar cada línea: quitar espacios al inicio/fin y eliminar líneas vacías
+            // Esto evita que la indentación del HTML altere el archivo PEM descargado.
+            publicKeyText = publicKeyText
+                .split(/\r?\n/)
+                .map(line => line.trim())
+                .filter(line => line.length > 0)
+                .join('\n') + '\n';
+
+            // Crear un blob con el contenido limpio
             const blob = new Blob([publicKeyText], { type: 'application/x-pem-file' });
-            
+
             // Crear un enlace de descarga
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -395,7 +403,7 @@ sXcjXidTxGYUnUq1POA0uLCy7yMRjxjlzvRgaePIZfu4/ZZiT6TSZayPUQ==
             a.download = 'marco_flores_public_key.pem';
             document.body.appendChild(a);
             a.click();
-            
+
             // Limpiar
             setTimeout(() => {
                 document.body.removeChild(a);
