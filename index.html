@@ -1,415 +1,149 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marco Flores - Perfil</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f2f5;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .header {
-            position: relative;
-            text-align: center;
-        }
-        .cover-photo {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        }
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-top: -100px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        .section {
-            padding: 30px;
-            border-bottom: 1px solid #eee;
-        }
-        .section-title {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .card {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            margin: 10px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        .cv-btn {
-            background: #3498db;
-            color: white;
-        }
-        .key-btn {
-            background: #2ecc71;
-            color: white;
-        }
-        .gallery-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .gallery-img:hover {
-            transform: scale(1.02);
-        }
-        /* Estilos para el modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            overflow: auto;
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 800px;
-            animation: zoom 0.3s;
-            padding-top: 40px;
-        }
-        @keyframes zoom {
-            from {transform: scale(0);}
-            to {transform: scale(1);}
-        }
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .close:hover {
-            color: #3498db;
-        }
-        /* Nuevos estilos para la sección de criptografía */
-        .key-display {
-            background: #2c3e50;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 0.8em;
-            overflow-x: auto;
-            margin: 20px 0;
-            white-space: pre-wrap;
-        }
-        .crypto-instructions {
-            background: #f5f9fc;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #e1e8ed;
-            margin-top: 20px;
-        }
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-            }
-            .section {
-                padding: 20px;
-            }
-            .modal-content {
-                width: 95%;
-            }
-            .key-display {
-                font-size: 0.7em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Encabezado -->
-        <div class="header">
-            <img src="Images/Portada.webp" alt="Portada" class="cover-photo">
-            <img src="Images/FotoPerfil.jpg" alt="Marco Flores" class="profile-img">
-            <h1>Marco Antonio Flores Anzurez</h1>
-        </div>
+  <h1>Política de privacidad</h1>
 
-        <!-- Perfil Académico -->
-        <div class="section">
-            <h2 class="section-title">📚 Perfil Académico</h2>
-            <p>
-                Soy estudiante de Ingeniería en Sistemas Computacionales en el Instituto Politécnico Nacional, con formación en el desarrollo de software y la innovación tecnológica.<br>
-                Tengo experiencia en programación con lenguajes como <strong>C, Java, Python y Kotlin</strong>, y he trabajado en el desarrollo de aplicaciones móviles para Android.<br>
-                Además, manejo bases de datos como <strong>MySQL y PostgreSQL</strong>, y tengo conocimientos en desarrollo web con <strong>HTML, CSS y JavaScript</strong>.<br>
-                También he trabajado con redes de computadoras, sistemas operativos <strong>Linux</strong> y cómputo en la nube usando <strong>Microsoft Azure</strong>.
-            </p>
-        </div>
+  <p><strong>Última actualización:</strong> 24 de mayo de 2026</p>
 
-        <!-- Formación Académica -->
-        <div class="section">
-            <h2 class="section-title">🎓 Formación Académica</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="Images/escuela_secundaria_tecnica_no_25.png" alt="ESC-SEC_TEC" class="gallery-img">
-                    <h3>Secundaria Técnica #25</h3>
-                    <p>Cocoyoc, Morelos<br>
-                    2013-2016<br>
-                    Especialidad en Electricidad</p>
-                    <a href="https://secundariastecnicasmorelos.gob.mx/secundaria-tecnica-33-2/" target="_blank" style="color: #3498db; font-weight: bold; text-decoration: none;">↗ Visitar sitio web</a>
-                </div>
-                <div class="card">
-                    <img src="Images/CBTIS-76.jpg" alt="CBTIS" class="gallery-img">
-                    <h3>CBTIS #76</h3>
-                    <p>Cuautla, Morelos<br>
-                    2016-2019<br>
-                    Técnico en Electrónica</p>
-                    <a href="https://www.cbtis76.edu.mx/" target="_blank" style="color: #3498db; font-weight: bold; text-decoration: none;">↗ Visitar sitio web</a>
-                </div>
-                <div class="card">
-                    <img src="Images/Escom.jpeg" alt="ESCOM" class="gallery-img">
-                    <h3>ESCOM - IPN</h3>
-                    <p>Ciudad de México<br>
-                    2021-Actualidad<br>
-                    Ingeniería en Sistemas Computacionales</p>
-                    <a href="https://www.escom.ipn.mx/" target="_blank" style="color: #3498db; font-weight: bold; text-decoration: none;">↗ Visitar sitio web</a>
-                </div>
-            </div>
-        </div>
+  <p>
+    Esta Política de Privacidad describe cómo la aplicación
+    <strong>Prototipo Móvil Educativo para la Enseñanza de la Aritmética Básica con el Ábaco Prehispánico (Nepohualtzintzin)</strong>
+    trata la información de sus usuarios.
+  </p>
 
-        <!-- Habilidades -->
-        <div class="section">
-            <h2 class="section-title">💻 Habilidades</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Lenguajes de programación</h3>
-                    <p>C, Java, Python, Kotlin</p>
-                </div>
-                <div class="card">
-                    <h3>Desarrollo móvil</h3>
-                    <p>Aplicaciones Android con Kotlin y Android Studio</p>
-                </div>
-                <div class="card">
-                    <h3>Bases de datos</h3>
-                    <p>MySQL, PostgreSQL</p>
-                </div>
-                <div class="card">
-                    <h3>Desarrollo web</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                </div>
-                <div class="card">
-                    <h3>Redes y sistemas</h3>
-                    <p>Configuración de redes en gns3 usando sistemas operativos Linux y Windows</p>
-                </div>
-            </div>
-        </div>
+  <p>
+    La aplicación es un prototipo educativo para dispositivos Android cuyo propósito es apoyar la representación digital del Nepohualtzintzin
+    y la práctica de operaciones aritméticas básicas mediante una interfaz interactiva.
+  </p>
 
-        <!-- Experiencia -->
-        <div class="section">
-            <h2 class="section-title">💼 Experiencia</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Proyectos académicos</h3>
-                    <ul>
-                        <li>Análisis de algoritmos</li>
-                        <li>Diseño de bases de datos</li>
-                        <li>Desarrollo de aplicaciones móviles</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Configuración de redes</h3>
-                    <p>Diseño e implementación de redes con Linux</p>
-                </div>
-                <div class="card">
-                    <h3>Cómputo en la nube</h3>
-                    <p>Implementación en Microsoft Azure</p>
-                </div>
-            </div>
-        </div>
+  <h2>1. Público objetivo</h2>
 
-        <!-- Pasatiempos -->
-        <div class="section">
-            <h2 class="section-title">🏀🏋️‍♂️📚 Pasatiempos</h2>
-            <div class="grid">
-                <div class="card">
-                    <img src="Images/baloncesto.jpg" alt="Baloncesto" class="gallery-img">
-                    <h3>Baloncesto 🏀</h3>
-                    <p>Practico baloncesto desde los 12 años. He probado distintas posiciones de juego, desde poste hasta alero pasando por base, pero en general me gusta jugar en clásico 5x5, actualmente me encuentro en un torneo universitario de baloncesto 3x3.</p>
-                </div>
-                <div class="card">
-                    <img src="Images/gym.jpg" alt="Ejercicio" class="gallery-img">
-                    <h3>Fitness 🏋️‍♂️</h3>
-                    <p>He entrenado durante distintos periodos en mi vida, pero hace aproximadamente 3 años llevo haciéndolo constantemente, he realizado bloques de fuerza y también funcionales, pero desde hace un tiempo a la actualidad estoy probando un tipo de entrenamiento más enfocado en hipertrófia.</p>
-                </div>
-                <div class="card">
-                    <img src="Images/mangas.jpg" alt="Mangas" class="gallery-img">
-                    <h3>Colección de Mangas, Comics y Libros 📚</h3>
-                    <p>Colecciono cómics desde pequeño, con el tiempo empecé a tener mayor interés por los libros, novelas principalmente y actualmente en lo que más me he enfocado en coleccionar son los mangas, me gusta tener las colecciones completas, aunque a veces es complicado.</p>
-                </div>
-            </div>
-        </div>
+  <p>
+    La aplicación está dirigida principalmente a niñas y niños de primero y segundo grado de primaria, acompañados por un docente,
+    tutor, madre, padre o adulto responsable. También puede ser utilizada por cualquier persona interesada en conocer el funcionamiento
+    del Nepohualtzintzin.
+  </p>
 
-        <!-- Criptografía -->
-        <div class="section">
-            <h2 class="section-title">🔐 Datos de Criptografía</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>La Máquina Enigma</h3>
-                    <img src="Images/enigma.webp" alt="Enigma" class="gallery-img">
-                    <p>Usada en la Segunda Guerra Mundial, su cifrado fue roto por Alan Turing usando la primera computadora electromecánica.</p>
-                </div>
-                <div class="card">
-                    <h3>Blockchain</h3>
-                    <img src="Images/Blockchain.jpg" alt="Blockchain" class="gallery-img">
-                    <p>La tecnología detrás de Bitcoin usa criptografía de curva elíptica y funciones hash SHA-256 para asegurar las transacciones.</p>
-                </div>
-                <div class="card">
-                    <h3>Cifrado Cuántico</h3>
-                    <img src="Images/quantum.jpg" alt="Quantum" class="gallery-img">
-                    <p>La criptografía post-cuántica busca algoritmos resistentes a ataques de computadoras cuánticas que romperían RSA actual.</p>
-                </div>
-            </div>
+  <h2>2. Datos personales</h2>
 
-            <!-- Sección de descarga de llave pública -->
-            <div style="text-align: center; margin-top: 30px;">
-                <h3>Llave Pública ECDSA</h3>
-                <p>Descarga mi llave pública para enviarme mensajes cifrados</p>
-                
-                <div class="key-display" id="publicKeyDisplay">
------BEGIN PUBLIC KEY-----
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAxVZPZwQCNYmEKRNXjCi7lxj6lBV
-sXcjXidTxGYUnUq1POA0uLCy7yMRjxjlzvRgaePIZfu4/ZZiT6TSZayPUQ==
------END PUBLIC KEY-----
-                </div>
-                
-                <button id="downloadKeyBtn" class="button key-btn">Descargar Llave Pública</button>
-                
-                <div class="crypto-instructions">
-                    <h4>Instrucciones para la práctica:</h4>
-                    <ol>
-                        <li>Descarga mi llave pública usando el botón superior</li>
-                        <li>Usa el programa <a href="RSA2048.py" download>RSA2048.py</a> para cifrar mensajes</li>
-                        <li>Envía el mensaje cifrado al destinatario</li>
-                        <li>El destinatario usará su llave privada para descifrarlo</li>
-                    </ol>
-                    <p><strong>Nota:</strong> En la demostración, muestra cómo un atacante (Candy) puede intentar modificar mensajes cifrados.</p>
-                </div>
-            </div>
-        </div>
+  <p>
+    La aplicación no solicita, recopila, almacena, transmite ni comparte datos personales del usuario.
+  </p>
 
-        <!-- Contacto y Descargas -->
-        <div class="section" style="text-align: center; border-bottom: none;">
-            <h2 class="section-title">📬 Contacto</h2>
-            <p>✉ Email: <a href="mailto:mfloresa2001@alumno.ipn.mx">mfloresa2001@alumno.ipn.mx</a></p>
-            <p>☎ Teléfono: <a href="tel:735-332-31-39">735-332-31-39</a></p>
-            <div style="margin-top: 20px;">
-                <a href="https://linkedin.com/in/marcofloresanzurez" target="_blank">LinkedIn</a> •
-                <a href="https://github.com/bucksedey" target="_blank">GitHub</a>
-            </div>
-            <div style="margin: 20px 0;">
-                <a href="CVMAFA.pdf" class="button cv-btn">Descargar CV</a>
-                <a href="RSA2048.py" download class="button key-btn">Descargar Programa RSA</a>
-            </div>
-        </div>
-    </div>
+  <p>En particular, la aplicación no solicita:</p>
 
-    <!-- Modal para imágenes ampliadas -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="expandedImage">
-    </div>
+  <ul>
+    <li>Nombre real del usuario.</li>
+    <li>Correo electrónico.</li>
+    <li>Número telefónico.</li>
+    <li>Ubicación.</li>
+    <li>Fotografías, cámara o micrófono.</li>
+    <li>Contactos.</li>
+    <li>Información financiera.</li>
+    <li>Identificadores del dispositivo.</li>
+    <li>Cuentas de usuario o credenciales de acceso.</li>
+  </ul>
 
-    <script>
-        // Script para el modal de imágenes
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("expandedImage");
-        const closeBtn = document.getElementsByClassName("close")[0];
-        const galleryImages = document.querySelectorAll(".gallery-img");
+  <h2>3. Datos de niñas y niños</h2>
 
-        galleryImages.forEach(img => {
-            img.addEventListener("click", function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            });
-        });
+  <p>
+    La aplicación puede ser utilizada por menores de edad con acompañamiento de un adulto responsable. Sin embargo, la aplicación
+    no recopila información personal de niñas, niños o adolescentes.
+  </p>
 
-        closeBtn.addEventListener("click", function() {
-            modal.style.display = "none";
-        });
+  <p>
+    La aplicación no incluye funciones de comunicación entre usuarios, perfiles públicos, publicidad personalizada, compras dentro de
+    la aplicación ni mecanismos de rastreo.
+  </p>
 
-        window.addEventListener("click", function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        });
+  <h2>4. Información almacenada localmente</h2>
 
-        // Script para descargar la llave pública
-        document.getElementById('downloadKeyBtn').addEventListener('click', function() {
-            // Obtener el texto de la llave pública (puede venir con espacios por la indentación del HTML)
-            let publicKeyText = document.getElementById('publicKeyDisplay').textContent || '';
+  <p>
+    La aplicación puede guardar información técnica únicamente dentro del dispositivo del usuario, con el propósito de conservar el
+    funcionamiento básico del prototipo. Esta información puede incluir:
+  </p>
 
-            // Limpiar cada línea: quitar espacios al inicio/fin y eliminar líneas vacías
-            // Esto evita que la indentación del HTML altere el archivo PEM descargado.
-            publicKeyText = publicKeyText
-                .split(/\r?\n/)
-                .map(line => line.trim())
-                .filter(line => line.length > 0)
-                .join('\n') + '\n';
+  <ul>
+    <li>Estado local del ábaco.</li>
+    <li>Progreso dentro de los ejercicios.</li>
+    <li>Resultados de práctica.</li>
+    <li>Configuraciones internas de la aplicación.</li>
+  </ul>
 
-            // Crear un blob con el contenido limpio
-            const blob = new Blob([publicKeyText], { type: 'application/x-pem-file' });
+  <p>
+    Esta información se almacena de forma local en el dispositivo y no se envía a servidores externos.
+  </p>
 
-            // Crear un enlace de descarga
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'marco_flores_public_key.pem';
-            document.body.appendChild(a);
-            a.click();
+  <h2>5. Conexión a internet</h2>
 
-            // Limpiar
-            setTimeout(() => {
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-            }, 100);
-        });
-    </script>
+  <p>
+    La aplicación funciona sin conexión a internet. No requiere conexión permanente ni transmite información del usuario a servicios
+    externos para operar.
+  </p>
+
+  <h2>6. Compartición de datos</h2>
+
+  <p>
+    La aplicación no comparte datos personales ni información de uso con terceros.
+  </p>
+
+  <p>
+    No se utilizan servicios externos de publicidad, analítica, rastreo comercial o monetización dentro de la aplicación.
+  </p>
+
+  <h2>7. Permisos del dispositivo</h2>
+
+  <p>
+    La aplicación no requiere permisos sensibles del dispositivo para su funcionamiento, como ubicación, cámara, micrófono, contactos,
+    llamadas, SMS o almacenamiento externo.
+  </p>
+
+  <h2>8. Eliminación de información local</h2>
+
+  <p>
+    Como la aplicación no crea cuentas ni almacena información en servidores externos, no existe una cuenta de usuario que deba eliminarse.
+  </p>
+
+  <p>
+    La información local puede eliminarse desde el dispositivo mediante las opciones del sistema Android, por ejemplo:
+  </p>
+
+  <p>
+    <strong>Configuración &gt; Aplicaciones &gt; [Nombre de la aplicación] &gt; Almacenamiento &gt; Borrar datos</strong>
+  </p>
+
+  <p>
+    También puede eliminarse desinstalando la aplicación.
+  </p>
+
+  <h2>9. Seguridad</h2>
+
+  <p>
+    La aplicación limita el almacenamiento de información al dispositivo del usuario. Al no transmitir datos personales ni usar servidores
+    externos, se reduce el riesgo asociado al tratamiento de información sensible.
+  </p>
+
+  <h2>10. Cambios a esta política</h2>
+
+  <p>
+    Esta política de privacidad puede actualizarse si la aplicación incorpora nuevas funciones, como cuentas de usuario, servicios en línea,
+    analítica, almacenamiento remoto, publicidad o sincronización de datos. En tal caso, la política será modificada para reflejar con claridad
+    los nuevos tratamientos de información.
+  </p>
+
+  <h2>11. Contacto</h2>
+
+  <p>
+    Para dudas relacionadas con esta política de privacidad, puede utilizarse el siguiente medio de contacto:
+  </p>
+
+  <p>
+    <strong>Correo electrónico:</strong> marcoflores9k@gmail.com
+  </p>
 </body>
 </html>
